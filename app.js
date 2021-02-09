@@ -1,3 +1,4 @@
+// variables 
 var numSquares = 6;
 var colors = [];
 var pickedColor;
@@ -11,12 +12,14 @@ var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay"); 
 var resetPressed = true; 
 
-
+// setting the page
 init();
+
 
 function init(){
 	setupModeButtons();
 	setupSquares();
+	// so program is persistant across session 
 	var lsScore = localStorage.getItem('score');
 	if( lsScore !== null ){
 		score = lsScore; 
@@ -27,7 +30,7 @@ function init(){
 	}
 	reset();
 }
-
+// So that mode can be changed from Easy to Hard
 function setupModeButtons(){
 	for(var i = 0; i < modeButtons.length; i++){
 		modeButtons[i].addEventListener("click", function(){
@@ -49,7 +52,6 @@ function setupSquares(){
 			//compare color to pickedColor
 			if(clickedColor === pickedColor){ 
 				updateColorName();
-				//console.log(colorName);
 				messageDisplay.textContent = "Correct!";
 				resetButton.textContent = "Play Again?"
 				changeColors(clickedColor);
@@ -60,7 +62,9 @@ function setupSquares(){
 				}
 				scoreDisplay.textContent = score;
 				localStorage.setItem('score', score);
-			} else {
+			} 
+			// if wrong
+			else {
 				this.style.background = "#232323";
 				messageDisplay.textContent = "Try Again"
 				score--;
@@ -71,7 +75,7 @@ function setupSquares(){
 	}
 }
 
-
+// requsting api for color name of the rbg values
 async function updateColorName(){
 	const regex = /\([^\)]+\)/g; 
 	var rgbColors = pickedColor.match(regex); 

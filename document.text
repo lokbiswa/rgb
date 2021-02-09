@@ -59,15 +59,18 @@ Play the game for a few minutes, get to know it, change the difficulty.
         The fetch function is a api request function, we can use it to make Http request to APIs
 
         x.  What does it do?
-        In this application Fetch is used 
+        In this application Fetch is used to request color name from an API.
 
         xi.  What's an alternative to using fetch? 
-
+        some alternatives to fetch are FileZilla, Cyberduck, Forklift, and so on. 
         xii.  Why use one over the other? 
+        there are some advantages and disadvantages in using fetch one of the disadvantage is, fetch is only supported by newer browsers. In this case if Axios is used it is supported by most of the older browsers. 
 
 5.  Add comments to the JavaScript code explaining what you think each function does.
 
 6.  As you went through this process which of the 3E's did you draw from most? How?
+-I am mostly observering and other time looking up. Since most of the things on this program are new, I was very curious to know what each of the code did. To figure that out, I had to observer. So from the 3E's I drew most from the Observation. 
+
 
     a. Curiosity, Deal with Uncertainty, Observation Skills
 
